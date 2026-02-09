@@ -4,6 +4,7 @@ import TicketCard from '@/components/TicketCard'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import LogoutButton from '@/components/LogoutButton'
+import DownloadReportButton from '@/components/DownloadReportButton'
 
 export const dynamic = 'force-dynamic'
 
@@ -45,6 +46,7 @@ export default async function AdminPage() {
               <p className="mt-1 text-sm text-gray-600">View and manage all IT support tickets</p>
             </div>
             <div className="flex items-center gap-3">
+              <DownloadReportButton tickets={tickets} />
               <Link
                 href="/"
                 className="text-sm font-medium text-gray-700 hover:text-gray-900"
